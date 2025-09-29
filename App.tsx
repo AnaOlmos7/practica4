@@ -10,10 +10,10 @@ export default function App() {
   })
   return (
     <View style= {styles.contenedor}>
-      <View style= {styles.boton1}>
+      <View style= {[styles.botonGenerico,styles.boton1]}>
       <Text style= {styles.texto}>Botón 1</Text>
       </View>
-        <View style= {styles.boton2}>
+        <View style= {[styles.botonGenerico,styles.boton2]}>
       <Text style= {styles.texto}>Botón 2</Text>
       </View>
         <View>
@@ -21,17 +21,17 @@ export default function App() {
     colors={['#01C7A0', '#40F680']}
     start={{x: 0.93, y: 0.75}}
     end={{x: 0.07, y: 0.25}}
-    style={styles.boton3}
+    style={[styles.botonGenerico,styles.boton3]}
   >
       <Text style= {styles.texto}>Botón 3</Text>
     </LinearGradient>
       </View>
-        <View style= {styles.boton4}>
+        <View style= {[styles.botonGenerico,styles.boton4]}>
       <Text style= {styles.texto}>Botón 4 {" "}
         <MaterialIcons name= {"download"} size={24} color={"white"}/>
       </Text>
       </View>
-        <View style= {styles.boton5}>
+        <View style= {[styles.botonGenerico,styles.boton5]}>
       <Text style= {styles.texto5}>Botón 5</Text>
       </View>
     </View>
@@ -49,11 +49,14 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
 
-  boton1: {
+  botonGenerico: {
     width: 200,
     height: 50,
-    marginBottom: 80,
-  
+    marginBottom: 80
+  },
+
+  boton1: {
+   
 
     backgroundColor: "#e7e3f2",
     borderColor: "#ef1438",
@@ -63,9 +66,7 @@ const styles = StyleSheet.create({
   },
 
   boton2: {
-    width: 200,
-    height: 50,
-    marginBottom: 80,
+    
 
     backgroundColor: "#ffd067",
 
@@ -81,17 +82,13 @@ const styles = StyleSheet.create({
   },
 
   boton3: {
-    width: 200,
-    height: 50,
-    marginBottom: 80,
+
 
     borderRadius:20
   },
 
   boton4: {
-    width: 200,
-    height: 50,
-    marginBottom: 80,
+  
 
     backgroundColor: "#4d83f5",
     borderRadius: 10
@@ -99,9 +96,9 @@ const styles = StyleSheet.create({
   },
 
   boton5: {
-    width: 200,
+    
     height: 200,
-    marginBottom: 80,
+    
 
     backgroundColor: "#f25d79",
     borderRadius: "50%"
